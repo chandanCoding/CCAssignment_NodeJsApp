@@ -21,12 +21,12 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: npm install, build, re-build bcrypt from source
+      - name: npm install, install bcrypt, build
 
         run: |
           npm install
+          npm install bcrypt
           npm run build --if-present
-          npm rebuild bcrypt --build-from-source
           
       
       - name: Upload artifact for deployment job
