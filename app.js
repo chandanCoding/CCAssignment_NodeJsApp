@@ -1,6 +1,6 @@
 const express = require('express');
 const http = require('http');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const path = require("path");
 const bodyParser = require('body-parser');
 const users = require('./data').userDB;
@@ -34,7 +34,7 @@ app.post('/register', async (req, res) => {
             users.push(newUser);
             console.log('User list', users);
     
-            res.send("<div align ='center' class= 'container'><h2>Registration successful!</h2></div><br><br><div align='center'><a class 'link-info' href='./index.html'>login</a></div><br><br><div align='center'><a href='./registration.html'>Register another user.</a></div>");
+            res.send("<div align ='center' class= 'container'><h2>Registration successful!</h2></div><br><br><div align='center'><a class 'link-info' href='./index.html'>Login</a></div><br><br><div align='center'><a href='./registration.html'>Register another user.</a></div>");
         } else {
             res.send("<div align ='center' class= 'container'><h2>Email already used!</h2></div><br><br><div align='center'><a class='link-info' href='./registration.html'>Register again.</a></div>");
         }
