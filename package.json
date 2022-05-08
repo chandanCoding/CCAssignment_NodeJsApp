@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/souvik-pl/login1.git"
+    "url": "git+https://github.com/legacyChandan/CCAssignment_NodeJsApp.git"
   },
   "author": "souvik",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/souvik-pl/login1/issues"
+    "url": "https://github.com/legacyChandan/CCAssignment_NodeJsApp.git"
   },
-  "homepage": "https://github.com/souvik-pl/login1#readme",
+  "homepage": "https://github.com/legacyChandan/CCAssignment_NodeJsApp#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
