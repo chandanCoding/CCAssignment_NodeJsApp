@@ -11,6 +11,7 @@ const server = http.createServer(app);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname,'./public')));
 
+const port = process.env.PORT || 443;
 
 app.get('/',(req,res) => {
     res.sendFile(path.join(__dirname,'./public/index.html'));
@@ -71,6 +72,6 @@ app.post('/login', async (req, res) => {
 });
 
 
-server.listen(443, function(){
-    console.log("server is listening on port: 443");
+server.listen(port, function(){
+    console.log(`Login app listening at http://localhost:${port}`)
 });
